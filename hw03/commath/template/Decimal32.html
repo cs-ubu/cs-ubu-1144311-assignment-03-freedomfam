@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<section class="headline-sec">
+        <div class="overlay ">
+          <h4 style="color: black;">แปลงเลขทศนิยมเป็น เลข 32 บิต (IEEE 32 bit)</h4>
+          <hr>
+          <form action="" method="post">
+          {% csrf_token %}
+          <label for="exampleFormControlFile1" class="pull-left" style="text-align:left;">ใส่ตัวเลขลงช่องว่าง</label>
+          
+          <div class="col-md-10 align-items-center justify-content-center">
+            <input class="form-control form-control-lg" name="x" type="number" placeholder="กรอกตัวเลข" step="any" min="0" max="9999999"  value="{{d}}" required>
+          
+            <br>
+          </div>
+          
+          &nbsp;&nbsp;&nbsp;
+          
+          <button type="submit" class="btn btn-lg btn-primary">แปลงค่า</button>
+          <br>
+          <br>
+          <div class="col-md-10">
+            <left>
+            <div class="">
+              <div class="alert alert-primary">
+                <br>
+                
+                <h4>
+                  <b>Number :</b> {{ d }}
+                  <br>
+                  <br>
+                  
+                  <b>Answe :</b> {{ f }}
+                </h4>
+              
+                <br>
+                <br>
+              </div>
+            
+            </div>
+         
+          </div>
+        </div>
+</section>
+{% endblock content %}

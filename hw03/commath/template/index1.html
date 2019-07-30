@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<section id="home-sec">
+    <div class="overlay text-center">
+        <h1 class=""><i class=""></i> Computational Mathematics</h1>
+       
+    </div>
+</section>
+<section >
+        <br>
+        <br>
+        {% load static %}
+          <div class="container">
+              <div class="row text-center" >
+                  <div class="col-md-4">
+                      <p>
+                      <a href = '/Decimal32'>
+                      <img border = "0" src="{% static 'img/ma.jpg' %}" width="200" height="200">
+                      <h4>
+                          แปลงเลขทศนิยมเป็น <br>IEEE floating point double precision (32-bit)
+                      </h4>
+                    </a>
+                    </p>
+                  </div>
+      
+                  <div class="col-md-4">
+                      <p>
+                      <a href = '/Decimal64'>
+                        <img border = "0" src="{% static 'img/LuigiNSMBW.png' %}" width="200" height="200">
+                        <h4>แปลงเลขทศนิยมเป็น <br>IEEE floating point double precision (64-bit)</h4>
+                    </a>
+                </p>
+                  </div>
+      
+                  <div class="col-md-4">
+                      <a href = '/solve'>
+                        <img border = "0" src="{% static 'img/Yoshi_Artwork_-_Mario_Party_6.png' %}" width="215" height="215">
+                        <h4>แก้ระบบสมการเชิงเส้น <br> $Ax = b$</h4>
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+{% endblock content %}
